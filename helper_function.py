@@ -368,4 +368,5 @@ def create_modelcheckpoint_callback(filepath):
                                                                 save_best_only = False,
                                                                 save_freq = "epoch",
                                                                 verbose = 1)
+  return modelcheckpoint_callback
 
