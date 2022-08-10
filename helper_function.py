@@ -361,3 +361,11 @@ if len(bad_file_list) !=0:
         print (bad_file_list[i])
 else:
     print(' no improper image files were found')
+
+def create_modelcheckpoint_callback(filepath):
+  modelcheckpoint_callback = tf.keras.callbacks.ModelCheckpoint(filepath = filepath,
+                                                                save_weights_only = True,
+                                                                save_best_only = False,
+                                                                save_freq = "epoch",
+                                                                verbose = 1)
+
