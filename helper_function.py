@@ -330,3 +330,15 @@ def create_modelcheckpoint_callback(filepath):
                                                                 verbose = 1)
   return modelcheckpoint_callback
 
+def make_confusion_matrix(model,test_data):
+  y_true = np.concatenate([y for x, y in test_data], axis=0)
+  y_pred = model.predict(test_data)
+
+  ##plot confusion matrix
+  disp = ConfusionMatrixDisplay.from_predictions(y_true = y_true.argmax(axis=1),
+                                               display_labels=train_data.class_names,
+                                               xticks_rotation=90,
+                                               y_pred=np.round(y_pred_1.argmax(axis=1)))
+
+
+  plt.show()
