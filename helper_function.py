@@ -330,7 +330,11 @@ def create_modelcheckpoint_callback(filepath):
                                                                 verbose = 1)
   return modelcheckpoint_callback
 
-def make_confusion_matrix(model,test_data):
+def create_confusion_matrix(model,test_data):
+  """
+   please make shuffle off for test data so that 
+   pred and true matrix lines up
+  """ 
   y_true = np.concatenate([y for x, y in test_data], axis=0)
   y_pred = model.predict(test_data)
 
