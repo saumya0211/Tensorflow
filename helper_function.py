@@ -2,6 +2,7 @@
 ### Storing them here so they're easily accessible.
 
 import tensorflow as tf
+from sklearn.metrics import ConfusionMatrixDisplay
 
 
 # Create a function to import an image and resize it to be able to be used with our model
