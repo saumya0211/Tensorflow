@@ -349,7 +349,7 @@ def create_confusion_matrix(model,test_data):
   disp = ConfusionMatrixDisplay.from_predictions(y_true = y_true.argmax(axis=1),
                                                display_labels=test_data.class_names,
                                                xticks_rotation=90,
-                                               y_pred=np.round(y_pred_1.argmax(axis=1)))
+                                               y_pred=np.round(y_pred.argmax(axis=1)))
 
 
   plt.show()
