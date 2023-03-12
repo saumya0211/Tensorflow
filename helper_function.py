@@ -354,6 +354,7 @@ def create_confusion_matrix(model,test_data):
 
   plt.show()
 
+
 import time
 
 def model_speed(model,samples):
