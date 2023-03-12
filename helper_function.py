@@ -353,3 +353,28 @@ def create_confusion_matrix(model,test_data):
 
 
   plt.show()
+
+    import time
+
+def model_speed(model,samples):
+  """
+  Times how long a model takes to make predictions on samples.
+  
+  Args:
+  ----
+  model = a trained model
+  sample = a list of samples
+
+  Returns:
+  ----
+  total_time = total elapsed time for model to make predictions on samples
+  time_per_pred = time in seconds per single sample
+  """
+
+  start_time = time.perf_counter()
+  model.predict(samples)
+  end_time= time.perf_counter()
+  total_time = end_time - start_time
+  time_per_sample = total_time/len(samples)
+
+  return total_time,time_per_sample
